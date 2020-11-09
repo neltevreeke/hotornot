@@ -1,0 +1,27 @@
+@import 'base.scss';
+
+.component {
+  height: 80px;
+  border-bottom: 2px solid $color-primary;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+.logo {
+  color: $color-primary;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.controls {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.controlSpacing {
+  margin-right: 2rem;
+}

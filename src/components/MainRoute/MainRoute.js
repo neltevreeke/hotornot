@@ -6,8 +6,6 @@ const MainRoute = ({
   matchProps,
   component: Component,
 }) => {
-  const dispatch = useDispatch()
-
   return (
     <Component {...matchProps} />
   )

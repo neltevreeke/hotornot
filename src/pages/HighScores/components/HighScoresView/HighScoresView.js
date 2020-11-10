@@ -11,7 +11,10 @@ const HighScoresView = () => {
   const [highScore, setHighScore] = useState([])
 
   useEffect(() => {
+    // sets up sockets for receiving updates from server
     dispatch(setUpSockets(setHighScore))
+
+    // retrieves initial highscore statements on first load
     dispatch(getInitialStatements(setHighScore))
   }, [])
 

@@ -11,3 +11,16 @@ export const getInitialStatements = (setHighScore) => async () => {
     console.error(e)
   }
 }
+
+export const postStatement = (statement) => async () => {
+  try {
+    await request('statement', {
+      method: 'POST',
+      body: {
+        statement
+      }
+    })
+  } catch (e) {
+    console.error(e)
+  }
+}

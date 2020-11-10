@@ -4,7 +4,7 @@ import Page from '../../../../components/Page/Page'
 import { useDispatch } from 'react-redux'
 import { setUpSockets } from '../../../../actions/sockets'
 import { getInitialStatements } from 'actions/statements'
-import Statement from '../../../Home/components/Statement/Statement'
+import Statement from '../../../../components/Statement/Statement'
 
 const HighScoresView = () => {
   const dispatch = useDispatch()
@@ -23,6 +23,7 @@ const HighScoresView = () => {
             <Statement
               key={index}
               label={statement.label}
+              count={statement.count}
             />
           )
         })}

@@ -1,8 +1,11 @@
 import React , { useState, useEffect } from 'react'
 import styles from './Statements.scss'
-import Statement from '../Statement/Statement'
-import request from 'utils/request'
+import Statement from '../../../../components/Statement/Statement'
+// import request from 'utils/request'
+import { useDispatch } from 'react-redux'
+import { postStatement } from '../../../../actions/statements'
 
+// statements array
 const statements = [{
   label: 'Statement 1'
 }, {
@@ -51,7 +54,6 @@ const statements = [{
   label: 'Statement 23'
 }]
 
-
 // gets 5 random statements from the statements array
 const fillRandomStatements = (arr) => {
   const n = 5 - arr.length
@@ -70,9 +72,9 @@ const fillRandomStatements = (arr) => {
   return arr
 }
 
-
 const Statements = () => {
   let tmpArr = []
+  const dispatch = useDispatch()
   const [randomStatements, setRandomStatements] = useState([])
 
   useEffect(() => {
@@ -94,12 +96,7 @@ const Statements = () => {
     setRandomStatements(tmpArr)
 
     // send chosen statement to backend
-    request('statement', {
-      method: 'POST',
-      body: {
-        statement
-      }
-    })
+    dispatch(postStatement(statement))
   }
 
   return (

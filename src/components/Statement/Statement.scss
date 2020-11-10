@@ -1,4 +1,4 @@
-@import 'base.scss';
+@import 'styles/_base.scss';
 
 .component {
   width: 100%;
@@ -11,8 +11,13 @@
   align-items: center;
   border-radius: $border-radius;
   cursor: pointer;
+  flex-direction: column;
 
   &:hover {
     background-color: darken($color-primary, 10);
+  }
+
+  p {
+    margin:0;
   }
 }

@@ -3,6 +3,7 @@ import styles from './Statement.scss'
 
 const Statement = ({
   label,
+  count = false,
   onClick
 }) => {
   return (
@@ -10,7 +11,8 @@ const Statement = ({
       className={styles.component}
       onClick={onClick}
     >
-      {label}
+      <p>{label}</p>
+      <p>{count}</p>
     </div>
   )
 }

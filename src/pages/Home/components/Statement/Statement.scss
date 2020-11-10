@@ -1,0 +1,18 @@
+@import 'base.scss';
+
+.component {
+  width: 100%;
+  background-color: $color-primary;
+  color: white;
+  height: 80px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-primary, 10);
+  }
+}
